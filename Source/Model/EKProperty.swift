@@ -148,8 +148,12 @@ public struct EKProperty {
         public var buttonHeight: CGFloat
         public var separatorColor: UIColor
         public var expandAnimatedly: Bool
-        
+
         public init(with buttonContents: ButtonContent..., separatorColor: UIColor, buttonHeight: CGFloat = 50, expandAnimatedly: Bool) {
+            self.init(with: buttonContents, separatorColor: separatorColor, buttonHeight: buttonHeight, expandAnimatedly: expandAnimatedly)
+        }
+
+        public init(with buttonContents: [ButtonContent], separatorColor: UIColor, buttonHeight: CGFloat = 50, expandAnimatedly: Bool) {
             self.separatorColor = separatorColor
             self.expandAnimatedly = expandAnimatedly
             self.buttonHeight = buttonHeight
